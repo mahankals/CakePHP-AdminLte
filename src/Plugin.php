@@ -3,12 +3,14 @@ declare(strict_types=1);
 
 namespace AdminLte;
 
-use Cake\Console\CommandCollection;
 use Cake\Core\BasePlugin;
-use Cake\Core\ContainerInterface;
-use Cake\Core\PluginApplicationInterface;
+use Cake\Event\EventManager;
+use Cake\Event\EventInterface;
 use Cake\Http\MiddlewareQueue;
 use Cake\Routing\RouteBuilder;
+use Cake\Core\ContainerInterface;
+use Cake\Console\CommandCollection;
+use Cake\Core\PluginApplicationInterface;
 
 /**
  * Plugin for AdminLte
@@ -26,7 +28,15 @@ class AdminLtePlugin extends BasePlugin
      */
     public function bootstrap(PluginApplicationInterface $app): void
     {
-        // remove this method hook if you don't need it
+        parent::bootstrap($app);
+
+        // Automatically set the custom layout for all controllers
+        EventManager::instance()->on('Controller.initialize', function (EventInterface $event) {
+            $controller = $event->getSubject();
+            if (method_exists($controller, 'viewBuilder')) {
+                $controller->viewBuilder()->setLayout('AdminLte.default');
+            }
+        });
     }
 
     /**
