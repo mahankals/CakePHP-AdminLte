@@ -1,0 +1,27 @@
+{
+    "name": "mahankals/cakephp-adminlte",
+    "version": "dev-main",
+    "type": "cakephp-plugin",
+    "authors": [
+        {
+            "name": "Atul Mahankal",
+            "email": "atulmahankal@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AdminLte\\": "src/"
+        }
+    },
+    "extra": {
+        "installer-name": "AdminLte",
+        "cakephp": {
+            "plugin": "AdminLte"
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "cakephp/cakephp": "5.1.*",
+        "composer/installers": "*"
+    }
+}
