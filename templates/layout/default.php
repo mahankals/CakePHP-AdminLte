@@ -1,7 +1,11 @@
+<?php
+use Cake\Core\Configure;
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= $this->fetch('title') ?> - My Custom Theme</title>
+    <title><?= $this->fetch('title') ?> | <?= Configure::read('admin-lte.title') ?></title>
     <?= $this->Html->css(['custom']) ?>
 </head>
 <body>

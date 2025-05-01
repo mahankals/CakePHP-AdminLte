@@ -89,6 +89,7 @@ class AdminLtePlugin extends BasePlugin
         // remove this method hook if you don't need it
 
         $commands = parent::console($commands);
+        // $commands->add('publish_config', \AdminLte\Command\PublishConfigCommand::class); // Add global command
 
         return $commands;
     }
