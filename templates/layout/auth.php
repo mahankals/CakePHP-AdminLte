@@ -21,21 +21,9 @@ use Cake\Core\Configure;
 </head>
 <!--end::Head-->
 <!--begin::Body-->
-<body class="layout-fixed sidebar-expand-lg bg-body-tertiary sidebar-mini clickup-chrome-ext_installed app-loaded">
-  <div class="app-wrapper">
-    <?php echo $this->element('AdminLte.nav-top'); ?>
-    <?php echo $this->element('AdminLte.aside-main-sidebar'); ?>
+<body class="bg-body-secondary">
+  <?= $this->fetch('content') ?>
 
-    <main class="app-main">
-      <?= $this->fetch('content') ?>
-    </main>
-
-    <?php echo $this->element('AdminLte.footer'); ?>
-    <?php echo $this->element('AdminLte.aside-control-sidebar'); ?>
-    <div class="control-sidebar-bg"></div>
-
-    <?= $this->fetch('end-content'); ?>
-  </div>
 
   <?= $this->Html->script('AdminLte.overlayscrollbars.browser.es6.min') ?>
   <?= $this->Html->script('AdminLte.bootstrap.bundle.min') ?>
