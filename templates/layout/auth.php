@@ -17,6 +17,7 @@ use Cake\Core\Configure;
   <?= $this->Html->css('AdminLte.overlayscrollbars.min') ?>
   <?= $this->Html->css('AdminLte.bootstrap-icons.min') ?>
   <?= $this->Html->css('AdminLte.adminlte.min') ?>
+  <?= $this->Html->css('app') ?>
   <?= $this->fetch('css'); ?>
 </head>
 <!--end::Head-->
@@ -28,6 +29,7 @@ use Cake\Core\Configure;
   <?= $this->Html->script('AdminLte.overlayscrollbars.browser.es6.min') ?>
   <?= $this->Html->script('AdminLte.bootstrap.bundle.min') ?>
   <?= $this->Html->script('AdminLte.adminlte.min') ?>
+  <?= $this->Html->script('AdminLte.jquery.min') ?>
 
   <!--begin::OverlayScrollbars Configure-->
   <script>
@@ -52,6 +54,7 @@ use Cake\Core\Configure;
   </script>
   <!--end::OverlayScrollbars Configure-->
 
+  <?= $this->Html->script('app') ?>
   <?= $this->fetch('script'); ?>
 </body>
 
