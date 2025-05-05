@@ -73,5 +73,19 @@ bin/cake AdminLte publish_config
     $this->Flash->warning('Warning Message', ['plugin' => 'AdminLte']);
     ```
 
+### Use AdmilLte view
+
+Use AdminLte configures Form Helper
+
+Modify `src\Controller\AuthController.php` or any controller
+
+```php
+  public function beforeRender(\Cake\Event\EventInterface $event)
+  {
+    parent::beforeRender($event);
+    $this->viewBuilder()->setClassName(\AdminLte\View\AppView::class);  //Use Plugin View
+  }
+```
+
 ## Enjoy
 You are now ready to use AdminLte4 theme into your application
