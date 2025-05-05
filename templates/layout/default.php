@@ -11,6 +11,8 @@ use Cake\Core\Configure;
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <?= $this->Html->meta('csrfToken', $this->request->getAttribute('csrfToken')); ?>
+
   <title><?= $this->fetch('title') ?> | <?= Configure::read('admin-lte.title') ?></title>
 
   <?= $this->Html->css([
