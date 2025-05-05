@@ -13,10 +13,12 @@ use Cake\Core\Configure;
 
   <title><?= $this->fetch('title') ?> | <?= Configure::read('admin-lte.title') ?></title>
 
-  <?= $this->Html->css('AdminLte.source-sans-3.index') ?>
-  <?= $this->Html->css('AdminLte.overlayscrollbars.min') ?>
-  <?= $this->Html->css('AdminLte.bootstrap-icons.min') ?>
-  <?= $this->Html->css('AdminLte.adminlte.min') ?>
+  <?= $this->Html->css([
+    'AdminLte.source-sans-3.index',
+    'AdminLte.overlayscrollbars.min',
+    'AdminLte.bootstrap-icons.min',
+    'AdminLte.adminlte.min'
+  ]) ?>
   <?= $this->Html->css('app') ?>
   <?= $this->fetch('css'); ?>
 </head>
@@ -38,10 +40,13 @@ use Cake\Core\Configure;
     <?= $this->fetch('end-content'); ?>
   </div>
 
-  <?= $this->Html->script('AdminLte.overlayscrollbars.browser.es6.min') ?>
-  <?= $this->Html->script('AdminLte.bootstrap.bundle.min') ?>
-  <?= $this->Html->script('AdminLte.adminlte.min') ?>
-  <?= $this->Html->script('AdminLte.jquery.min') ?>
+  <?= $this->Html->script([
+    'AdminLte.overlayscrollbars.browser.es6.min',
+    'AdminLte.bootstrap.bundle.min',
+    'AdminLte.adminlte.min',
+    'AdminLte.jquery.min',
+    'AdminLte.preloader',
+  ]) ?>
 
   <!--begin::OverlayScrollbars Configure-->
   <script>
