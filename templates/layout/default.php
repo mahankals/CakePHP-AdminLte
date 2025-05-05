@@ -29,6 +29,8 @@ use Cake\Core\Configure;
     <?php echo $this->element('AdminLte.nav-top'); ?>
     <?php echo $this->element('AdminLte.aside-main-sidebar'); ?>
 
+    <?= $this->Flash->render() ?>
+
     <main class="app-main">
       <?= $this->fetch('content') ?>
     </main>

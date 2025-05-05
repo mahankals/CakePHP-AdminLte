@@ -25,8 +25,9 @@ use Cake\Core\Configure;
 <!--end::Head-->
 <!--begin::Body-->
 <body class="bg-body-secondary">
-  <?= $this->fetch('content') ?>
+  <?= $this->Flash->render() ?>
 
+  <?= $this->fetch('content') ?>
 
   <?= $this->Html->script([
     'AdminLte.overlayscrollbars.browser.es6.min',
